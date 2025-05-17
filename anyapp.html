@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyApp - Download Now</title>
+
+  <!-- Google Fonts (Optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your real ID
+  </script>
+
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #000;
+      --accent: #00f2fe;
+      --button-bg: #007bff;
+      --button-text: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eee;
+      --accent: #00f2fe;
+      --button-bg: #00f2fe;
+      --button-text: #121212;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    .header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 2rem 1rem;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+    #themeToggle {
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .hero-text {
+      flex: 1;
+      padding: 1rem;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 400px;
+    }
+    .hero-text h2 span {
+      color: #ffd700;
+    }
+    .buttons {
+      margin-top: 1rem;
+    }
+    .btn {
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 0.8rem 1.5rem;
+      margin-right: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .feature-box {
+      background: #f0f0f0;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    [data-theme="dark"] .feature-box {
+      background: #1f1f1f;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+    }
+    .download .btn.big {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+    .changelog-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 2rem;
+    }
+    .changelog-list li {
+      margin-bottom: 1rem;
+    }
+    .footer {
+      background: #222;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h1 class="logo">MyApp</h1>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle">🌙</button>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Discover the Power of <span>MyApp</span></h2>
+        <p>Your all-in-one solution for mobile productivity.</p>
+        <div class="buttons">
+          <a href="app.apk" class="btn">Download for Android</a>
+          <a href="#" class="btn btn-outline">Coming to iOS</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="app-preview.png" alt="App Preview" />
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="section">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-box">🚀 Fast & Lightweight</div>
+      <div class="feature-box">🔒 Secure Login</div>
+      <div class="feature-box">🌙 Dark Mode</div>
+      <div class="feature-box">📲 Multi-Device Sync</div>
+    </div>
+  </section>
+
+  <section id="screenshots" class="section">
+    <h2>App Screenshots</h2>
+    <div class="gallery">
+      <img src="screenshot1.png" alt="Screenshot 1" />
+      <img src="screenshot2.png" alt="Screenshot 2" />
+      <img src="screenshot3.png" alt="Screenshot 3" />
+    </div>
+  </section>
+
+  <section id="download" class="section download">
+    <h2>Download Now</h2>
+    <p>Start your journey with MyApp today.</p>
+    <a href="app.apk" class="btn big">Download for Android</a>
+  </section>
+
+  <section id="changelog" class="section">
+    <h2>Changelog</h2>
+    <ul class="changelog-list">
+      <li><strong>v1.2</strong> – Added dark mode, improved UI speed (May 2025)</li>
+      <li><strong>v1.1</strong> – Bug fixes, added new dashboard screen</li>
+      <li><strong>v1.0</strong> – Initial release with core features</li>
+    </ul>
+  </section>
+
+  <footer id="contact" class="footer">
+    <p>Contact us at <a href="mailto:support@myapp.com">support@myapp.com</a></p>
+    <p>&copy; 2025 MyApp. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    function setTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme');
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+
+</body>
+</html>
